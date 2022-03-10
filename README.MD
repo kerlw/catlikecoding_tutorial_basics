@@ -23,7 +23,6 @@ Clock is implemented, but the animation of seconds arm is not smoothly, need to 
  > HDRP is a much more complex render pipeline. It won't be covered in catlikecoding's tutorials.
  
 ## 3. Mathematical Surfaces ##
-
 Interesting mathematics to graph.
 
 **Delegates**
