@@ -41,6 +41,30 @@ Interesting mathematics to graph.
 
 ## 5. Compute Shaders ##
 
+**Compute Threads** 
+```
+GPU hardware contains compute units that always run a specific fixed 
+amount of threads in lockstep. These are known as warps or wavefronts. 
+If the amount of threads of a group is less than the warp size some 
+threads will run idle, wasting time. If the amount of threads instead 
+exceeds the size then the GPU will use more warps per group. In general 
+64 threads is a good default, as that matches the warp size of AMD GPUs 
+while it's 32 for NVidia GPUs, so the latter will use two warps per 
+group. In reality the hardware is more complex and can do more with 
+thread groups, but this isn't relevant for our simple graph.
+
+The three arguments of numthreads can be used to organize the threads 
+in one, two, or three dimensions. For example, (64, 1, 1) gives us 64 
+threads in a single dimension while (8, 8, 1) gives us the same amount 
+but presented as a 2D 8×8 square grid. As we define our points based on 
+2D UV coordinates let's use the latter option.
+```
+
+When finish coding as `2.1 Drawing Many Meshes`, I got system crash after I entering play mode.
+Because I used URP.
+
+It's so boring to write shader and hlsl files, especially include hlsl file.
+
 ## 6. Jobs ## 
 
 ## 7. Organic Variety ##

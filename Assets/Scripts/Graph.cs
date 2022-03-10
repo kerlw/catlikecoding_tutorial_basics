@@ -1,10 +1,9 @@
 using UnityEngine;
-using UnityEngine.LowLevel;
 
 public class Graph : MonoBehaviour {
     [SerializeField] Transform pointPrefab;
 
-    [SerializeField, Range(10, 100)] int resolution = 50;
+    [SerializeField, Range(10, 200)] int resolution = 50;
 
     [SerializeField] FunctionLibrary.FunctionName function;
 
