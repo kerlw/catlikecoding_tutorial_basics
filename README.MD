@@ -30,6 +30,15 @@ Interesting mathematics to graph.
 
 ## 4. Measuring Performance ##
 
+1.  If we use URP instead the statistics are different. It renders faster (than BRP)....Although Saved by batching reports no batching, URP uses the SRP batcher by default, but the statistics panel doesn't understand it. The SRP batcher doesn't eliminate individual draw commands but can make them much more efficient. To illustrate this select our URP asset and disable SRP Batcher under the Advanced section at the bottom of its inspector. Make sure that Dynamic Batching is disabled as well.
+
+> With the SRP batcher disabled URP performance is much worse.
+
+> BRP supports shadows for point lights, but URP still doesn't.
+
+2. Dynamic batching is much more efficient for BRP, eliminating 29.964 batches, reducing them to only 39, but it doesn't appear to help much.
+3. Another way to improve rendering performance is by enabling GPU instancing. This makes it possible to use a single draw command to tell the GPU to draw many instances of one mesh with the same material, providing an array of transformation matrices and optionally other instance data. In this case we have to enable it per material. Ours have an Enable GPU Instancing toggle for it.
+
 ## 5. Compute Shaders ##
 
 ## 6. Jobs ## 
