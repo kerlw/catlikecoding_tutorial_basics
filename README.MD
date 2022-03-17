@@ -65,7 +65,17 @@ Because I used URP.
 
 It's so boring to write shader and hlsl files, especially include hlsl file.
 
-## 6. Jobs ## 
+## 6. Jobs ##
+
+>  `OnValidate` method that simply invokes OnDisable and OnEnable after each other, resetting the fractal. The OnValidate method gets invoked after a change has been made to the component via the inspector or an undo/redo action.
+
+> `Shouldn't we avoid sending data to the GPU?` As much as possible, yes. But we have no choice in this case, we have to send the matrices to the GPU somehow and this is the most efficient way to do it. 
+
+> `Why is the interface named IJobFor?` The convention is to prefix all interface types with an I which stands for interface, so the interface is named JobFor with an I prefix. It's a job interface, specifically one that is used for functionality that runs inside for loops.
+
+Keywords: Burst IJobFor Schedule BurstCompile
+
+In my project, `Fractal.cs` is using original creation and `Fractal2.cs` is using C# jobs.
 
 ## 7. Organic Variety ##
 
