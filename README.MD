@@ -79,3 +79,6 @@ In my project, `Fractal.cs` is using original creation and `Fractal2.cs` is usin
 
 ## 7. Organic Variety ##
 
+The whole thing is not very hard but difficult for me to understand, I've just learned how to set gradient. :P
+
+PS: Maybe there is something wrong with my code.
